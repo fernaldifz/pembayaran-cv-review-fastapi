@@ -45,6 +45,12 @@ def create_user(db: _orm.Session, user: _schemas.UserCreate):
     return db_user
 
 
+def delete_user(db: _orm.Session, user_id: int):
+    db.query(_models.User).filter(
+        _models.User.id == user_id).delete()
+    db.commit()
+
+
 def create_payment_method(db: _orm.Session, payment_method: _schemas.PaymentMethodCreate):
     db_payment_method = _models.PaymentMethod(
         payment_type=payment_method.payment_type, name=payment_method.name)

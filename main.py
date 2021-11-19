@@ -47,6 +47,12 @@ def read_user(user_id: int, db: _orm.Session = _fastapi.Depends(_services.get_db
     return db_user
 
 
+@app.delete("/user/{user_id}", tags=["user"])
+def delete_user(user_id: int, db: _orm.Session = _fastapi.Depends(_services.get_db)):
+    _services.delete_user(db=db, user_id=user_id)
+    return {"message": f"successfully deleted data user with id: {user_id}"}
+
+
 @app.post("/paymentMethod", response_model=_schemas.PaymentMethod, tags=["payment method"])
 def create_payment_method(
         payment_method: _schemas.PaymentMethodCreate, db: _orm.Session = _fastapi.Depends(_services.get_db)):
