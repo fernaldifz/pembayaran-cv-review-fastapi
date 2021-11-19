@@ -1,0 +1,58 @@
+{
+    "metodePembayaran": [
+        {
+            "id": 1,
+            "type": "e-money",
+            "name": "AVA"
+        },
+        {
+            "id": 2,
+            "type": "e-money",
+            "name": "GoodPay"
+        },
+        {
+            "id": 3,
+            "type": "e-money",
+            "name": "Shopy"
+        },
+        {
+            "id": 4,
+            "type": "online banking",
+            "name": "Sejahtera"
+        },
+        {
+            "id": 5,
+            "type": "online banking",
+            "name": "ABC"
+        },
+        {
+            "id": 6,
+            "type": "credit/debit card",
+            "name": "PayPay"
+        },
+        {
+            "id": 7,
+            "type": "credit/debit card",
+            "name": "MainCard"
+        },
+        {
+            "id": 8,
+            "type": "Cash on Delivery",
+            "name": "Cash on Delivery"
+        }
+    ],
+    "konfirmasiPembayaran": {
+        "asdf": {
+            "username": "asdf",
+            "packet": "A",
+            "payment_method": "AVA",
+            "payment": 70000
+        },
+        "fernaldi": {
+            "username": "fernaldi",
+            "packet": "B",
+            "payment_method": "ABC",
+            "payment": 80000
+        }
+    }
+}
