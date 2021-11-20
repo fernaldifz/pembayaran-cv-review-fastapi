@@ -1,1 +1,8 @@
 run.sh
+Pipfile
+Pipfile.lock
+.deployment
+requirements.txt
+settings.json
+/.vscode/
+database.db
