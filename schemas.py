@@ -1,5 +1,6 @@
 import pydantic as _pydantic
 from sqlalchemy.sql.expression import true
+from pydantic import BaseModel
 
 
 class _UserBase(_pydantic.BaseModel):
@@ -17,6 +18,11 @@ class User(_UserBase):
 
     class Config:
         orm_mode = True
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
 
 
 class _PaymentMethodBase(_pydantic.BaseModel):
